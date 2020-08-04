@@ -1,0 +1,23 @@
+{
+  "name": "shift-roaster",
+  "version": "1.0.0",
+  "description": "mean application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "rxjs": "^6.5.5"
+  },
+  "author": "sivakumar",
+  "license": "ISC"
+}

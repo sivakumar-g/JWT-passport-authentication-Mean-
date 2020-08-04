@@ -1,0 +1,33 @@
+
+
+<nav class="navbar navbar-expand-md bg-info navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">JWT Authentication</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav navbar-left nav-link navbar-dark">
+      <li class = "nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/']">Home</a></li>
+
+    </ul>
+
+    <ul class=" nav navbar-nav navbar-right nav-link">
+
+
+      <li class="nav-item" *ngIf="(authService.loggedIn())" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a class="nav-link" [routerLink]="['/login']">Login</a></li>
+
+
+      <li class="nav-item" *ngIf="! authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a class="nav-link" [routerLink]="['/profile']">profile</a></li>
+
+      <li class="nav-item"  *ngIf="(authService.loggedIn())" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a class="nav-link"  [routerLink]="['/register']">Register</a></li>
+      <li class="nav-item" *ngIf="! authService.loggedIn()" ><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
